@@ -10,8 +10,11 @@
 # bbmap.sh
 # Miranda Tomas
 
-# Este script utiliza el programa bbmap para limpiar los ficheros fastq paired-ends obtenidos por secuenciación Illumina. En primer lugar, se eliminan las reads correspondientes al fago phiX y después se elimina el adaptador y se filtran las reads que tengan una calidad mayor a la indicada.
-# Para ello, hay que pasar como argumentos: (1) fichero txt con los nombres de los ficheros fastq que se quieren procesar, (2) la posicion del adaptador, (3) la longitud y (4) la calidad minima que se quieren en las reads resultantes, (5) lado de las secuencias por el que se quiere filtrar y (6) nombre del directorio en el que guardar los fastq filtrados.
+# Este script utiliza el programa bbmap para limpiar los ficheros fastq paired-ends obtenidos por secuenciación Illumina. En primer lugar, 
+# se eliminan las reads correspondientes al fago phiX y después se elimina el adaptador y se filtran las reads que tengan una calidad mayor a la indicada.
+# Para ello, hay que pasar como argumentos: (1) fichero txt con los nombres de los ficheros fastq que se quieren procesar, (2) la posicion del adaptador, 
+# (3) la longitud y (4) la calidad minima que se quieren en las reads resultantes, (5) lado de las secuencias por el que se quiere filtrar y (6) nombre del 
+# directorio en el que guardar los fastq filtrados.
 
 # Ruta a la carpeta del programa 
 path=/storage/enbivir/software/BBMap_38.95/bbmap
@@ -78,7 +81,7 @@ do
 
         # Eliminar el adaptador y filtrar las reads
         $path/bbduk.sh in1=$outdir/$name"_R1_nophi.fastq" in2=$outdir/$name"_R2_nophi.fastq" out1=$outdir/$name"R1_filtered.fastq" out2=$outdir/$name"R2_filtered.fastq" ref=$path/resources/adapters.fa ktrim=$adapter_place hdist=1 tpe tbo minlen=$min_len trimq=$quality qtrim=$side
-	check_error "Fallo en eliminar el adaptar y filtrar las reads"
+	check_error "Fallo en eliminar el adaptador y filtrar las reads"
 
 done < $file_inputs
 
