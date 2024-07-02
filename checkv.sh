@@ -13,6 +13,9 @@
 # Este script utiliza el programa CheckV para evaluar la calidad de genomas virales y 
 # la estimación de la integridad de los fragmentos del genoma. 
 
+# Para ello, hay que pasar como argumentos: (1) ficheros de entrada que se quieren
+# analizar y (2) nombre del directorio en el que guardar los resultados.
+
 # Numero de argumentos que requiere el script
 n=2
 
@@ -27,6 +30,7 @@ else
 	
 	# Directorio de salida
 	outdir=$2
+ 	mkdir -p $outdir
 fi
 
 
