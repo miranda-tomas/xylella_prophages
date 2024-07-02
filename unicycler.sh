@@ -26,7 +26,7 @@ n=3
 # Verificar si se proporciona un numero de argumentos correcto
 if [ "$#" -ne "$n" ]; then
         echo "Error: Numero incorrecto de argumentos."
-        echo "Uso: $0 <archivo_input.txt>
+        echo "Uso: $0 <archivo_input.txt>, <directorio_input_illumina>, <directorio_input_ONT>"
         exit 1
 else
         # Fichero con los nombres de las muestras
@@ -37,7 +37,6 @@ else
 
 	# Directorio donde se encuentra el fichero fastq de Nanopore (el filtrado con nanofilt)
 	indir_ONT=$3
-
         
 fi
 
