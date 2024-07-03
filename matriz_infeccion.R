@@ -24,4 +24,5 @@ figura <- ggplot(df, aes(x = Profago, y = Cepa, fill = factor(Valor))) +
   labs(x = "Profago", y = "Cepa") +
   guides(fill = FALSE)
 
+# Guardar la figura en un fichero svg
 ggsave("matriz_infeccion.svg", plot = figura, width = 10, height = 6, bg = "transparent")
