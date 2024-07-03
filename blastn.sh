@@ -10,9 +10,11 @@
 # blastn.sh
 # Miranda Tomas
 
-# Este script compara mediante Blastn las secuencias input frente a la base de datos de virus o procaritas, según elija el usuario.
-# Para ello, hay que pasar como argumentos: (1) fichero txt con los nombres de los ficheros input, (2) base de datos que se quiere
-# utilizar (procariotas o virus) y (3) nombre del directorio en el que guardar los ficheros resultantes.
+# Este script compara mediante Blastn las secuencias input frente a la base de 
+# datos de virus o procaritas, según elija el usuario.
+# Para ello, hay que pasar como argumentos: (1) fichero txt con los nombres de 
+# los ficheros input, (2) base de datos que se quiere utilizar (procariotas o virus) 
+# y (3) nombre del directorio en el que guardar los ficheros resultantes.
 
 # Numero de argumentos que requiere el script
 n=3
