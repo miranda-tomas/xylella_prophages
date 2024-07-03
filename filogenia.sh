@@ -1,3 +1,4 @@
+#!/bin/bash
 #SBATCH -n 1        		# Number of cores requested
 #SBATCH -N 1           		# Number of nodes requested
 #SBATCH -t 24:00:00  		# Runtime in minutes
@@ -11,6 +12,9 @@
 
 # Este script realiza un alinemiento de secuencias fasta incluidas en un fichero FASTA utilizando
 # MAFFT y construye una filogenia utilizando iqtree, calculando el mejor modelo nucleotídico para ello.
+# Para ello, hay que pasar como argumentos: (1) fichero fasta con los secuencias problema, (2) el nombre
+# del fichero en el que guardar el alineamiento, (3) el nombre del fichero en el que guardar el árbol y 
+# (4) el valor de bootstrap que se quiere utilizar
 
 # Numero de argumentos que requiere el script
 n=4
