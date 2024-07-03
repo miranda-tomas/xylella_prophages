@@ -18,8 +18,11 @@
 # Ruta para el programa
 path=/storage/enbivir/software/FastQC
 
+# Numero de argumentos que requiere el script
+n=2
+
 # Verificar el número correcto de argumentos
-if [ "$#" -ne 2 ]; then
+if [ "$#" -ne "$n" ]; then
     echo "Error: Número incorrecto de argumentos."
     echo "Uso: $0 <archivo_input.txt> <directorio_salida>"
     exit 1
@@ -50,7 +53,6 @@ check_error() {
                 error_occured=true
         fi
 }
-
 
 # Bucle que recorre los ficheros, leyendo el fihcero txt con los nombres de las muestras
 while IFS= read -r name;
