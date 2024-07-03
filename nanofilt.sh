@@ -14,10 +14,13 @@
 # Para ello, hay que pasar como argumentos: (1) los ficheros de entrada, (2) la calidad y (3) lo longitud
 # mínima a la que se quiere filtrar y (4) nombre del directorio en el que guardar los fastq filtrados.
 
+# Numero de argumentos que requiere el script 
+n=4
+
 # Verificar el número correcto de argumentos
-if [ "$#" -ne 2 ]; then
+if [ "$#" -ne "$n" ]; then
     echo "Error: Número incorrecto de argumentos."
-    echo "Uso: $0 <archivo_input.txt> <directorio_salida>"
+    echo "Uso: $0 <archivo_input.txt> <calidad_minima> <longitud_minima> <directorio_salida>"
     exit 1
 
 else
