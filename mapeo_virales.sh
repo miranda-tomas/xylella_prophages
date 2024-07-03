@@ -90,3 +90,12 @@ do
 				-fq $outdir/$name"_R1_mapped.fastq" \
 				-fq2 $outdir/$name"_R2_mapped.fastq"
 done < $file_inputs
+
+# Verificar si ha ocurrido algún error
+if [ "$error_occurred" = false ]; then	
+	
+	echo "El programa ha finalido. Los ficheros fastq resultantes se encuentran en el directorio: $outdir"
+
+else
+	echo "El programa ha finalizado con errores."
+fi
